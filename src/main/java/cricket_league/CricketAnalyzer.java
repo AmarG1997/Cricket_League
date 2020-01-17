@@ -9,6 +9,8 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,6 +53,17 @@ public class CricketAnalyzer {
         }
         iplBattingCsvList = iplBattingCsvList.stream()
                 .sorted((data1,data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1)
+                .collect(Collectors.toList());
+        return iplBattingCsvList;
+    }
+
+    public List getMost6sand4s() throws CricketAnalyzerException {
+        if (iplBattingCsvList.size()==0){
+            throw new CricketAnalyzerException("Null pointer Exception",
+                    CricketAnalyzerException.ExceptionType.NULL_POINTER_EXCEPTION);
+        }
+        iplBattingCsvList = iplBattingCsvList.stream()
+                .sorted((data1,data2) -> (data2.sixes*6+data2.fours*4) - (data1.sixes*6 + data1.fours*4))
                 .collect(Collectors.toList());
         return iplBattingCsvList;
     }
