@@ -43,4 +43,15 @@ public class CricketAnalyzer {
         return iplBattingCsvList;
 
     }
+
+    public List getTopBattingStrikeRate() throws CricketAnalyzerException {
+        if (iplBattingCsvList.size()==0){
+            throw new CricketAnalyzerException("Null pointer Exception",
+                    CricketAnalyzerException.ExceptionType.NULL_POINTER_EXCEPTION);
+        }
+        iplBattingCsvList = iplBattingCsvList.stream()
+                .sorted((data1,data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1)
+                .collect(Collectors.toList());
+        return iplBattingCsvList;
+    }
 }

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffe14e68-1eb3-41d4-a580-018e96c111f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/BatsmanWithWrongHeader.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -16,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricket_league/CricketAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricket_league/CricketAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricket_league/CricketAnalyzerException$ExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricket_league/CricketAnalyzerException$ExceptionType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/cricket_league/Batting_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/cricket_league/Batting_Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/cricket_league.Batting_Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/cricket_league.Batting_Test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
@@ -25,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,6 +45,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -69,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="120">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -93,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="90">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -139,9 +146,9 @@
         <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostRuns.csv" />
         <option value="$PROJECT_DIR$/src/test/resources/BatsmanData.csv" />
         <option value="$PROJECT_DIR$/src/main/java/cricket_league/IPLBattingCsv.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/BatsmanWithWrongHeader.csv" />
         <option value="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java" />
         <option value="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/BatsmanWithWrongHeader.csv" />
         <option value="$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java" />
       </list>
     </option>
@@ -259,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Batting_Test">
+  <component name="RunManager" selected="Gradle.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException">
     <configuration name="Batting_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -300,12 +307,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;cricket_league.Batting_Test.givenBattingCsvFile_shouldReturnTopBattingStrikingGRates&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -320,12 +327,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Batting_Test.givenBattingWrongCsvFile_shouldReturnException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;cricket_league.Batting_Test.givenBattingWrongCsvFile_shouldReturnException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -362,11 +369,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Batting_Test" />
         <item itemvalue="Gradle.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException" />
+        <item itemvalue="Gradle.Batting_Test.givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" />
+        <item itemvalue="Gradle.Batting_Test" />
         <item itemvalue="Gradle.Batting_Test.givenBattingCsvFile_shouldReturnTopBattingAverages" />
         <item itemvalue="Gradle.Batting_Test.givenBattingWrongCsvFile_shouldThrowException" />
-        <item itemvalue="Gradle.Batting_Test.givenBattingWrongCsvFile_shouldReturnException" />
       </list>
     </recent_temporary>
   </component>
@@ -384,24 +391,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnTopBattingAverages - 2020.01.17 at 14h 55m 13s.xml">
-      <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingAverages" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnTopBattingAverages - 2020.01.17 at 14h 55m 25s.xml">
-      <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingAverages" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Batting_Test - 2020.01.17 at 15h 15m 24s.xml">
-      <configuration name="Batting_Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Batting_Test_givenBattingWrongCsvFile_shouldReturnException - 2020.01.17 at 15h 22m 38s.xml">
-      <configuration name="Batting_Test.givenBattingWrongCsvFile_shouldReturnException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Batting_Test_givenBattingWrongCsvFile_shouldReturnException - 2020.01.17 at 15h 24m 03s.xml">
-      <configuration name="Batting_Test.givenBattingWrongCsvFile_shouldReturnException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Batting_Test_givenBattingWrongCsvFile_shouldReturnException - 2020.01.17 at 15h 24m 35s.xml">
-      <configuration name="Batting_Test.givenBattingWrongCsvFile_shouldReturnException" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="Batting_Test_givenBattingWrongCsvFile_shouldReturnException - 2020.01.17 at 15h 25m 54s.xml">
       <configuration name="Batting_Test.givenBattingWrongCsvFile_shouldReturnException" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -413,6 +402,24 @@
     </history-entry>
     <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnTopBattingAverages - 2020.01.17 at 15h 33m 01s.xml">
       <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingAverages" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test_givenBattingWrongCsvFileHeader_shouldThrowException - 2020.01.17 at 15h 34m 41s.xml">
+      <configuration name="Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test - 2020.01.17 at 15h 35m 50s.xml">
+      <configuration name="Batting_Test" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnTopBattingStrikingGRates - 2020.01.17 at 15h 48m 45s.xml">
+      <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnTopBattingStrikingGRates - 2020.01.17 at 15h 49m 27s.xml">
+      <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnTopBattingStrikingGRates - 2020.01.17 at 15h 50m 21s.xml">
+      <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test_givenBattingWrongCsvFileHeader_shouldThrowException - 2020.01.17 at 15h 51m 32s.xml">
+      <configuration name="Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -434,7 +441,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3306189" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32954547" />
@@ -511,23 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/BatsmanData.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -549,13 +539,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzerException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

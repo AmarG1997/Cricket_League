@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricket_league.Batting_Test" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-01-17T10:05:48" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.011">
+<testsuite name="cricket_league.Batting_Test" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-01-17T10:21:52" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.142">
   <properties/>
-  <testcase name="givenBattingWrongCsvFile_shouldThrowException" classname="cricket_league.Batting_Test" time="0.017"/>
-  <testcase name="givenBattingCsvFile_shouldReturnCsvFileData" classname="cricket_league.Batting_Test" time="0.653"/>
-  <testcase name="givenBattingWrongCsvFileHeader_shouldThrowException" classname="cricket_league.Batting_Test" time="0.035"/>
-  <testcase name="givenBattingCsvFile_shouldReturnTopBattingAverages" classname="cricket_league.Batting_Test" time="0.304"/>
+  <testcase name="givenBattingWrongCsvFile_shouldThrowException" classname="cricket_league.Batting_Test" time="0.015"/>
+  <testcase name="givenBattingCsvFile_shouldReturnCsvFileData" classname="cricket_league.Batting_Test" time="0.606"/>
+  <testcase name="givenBattingWrongCsvFileHeader_shouldThrowException" classname="cricket_league.Batting_Test" time="0.039"/>
+  <testcase name="givenBattingCsvFile_shouldReturnTopBattingAverages" classname="cricket_league.Batting_Test" time="0.255"/>
+  <testcase name="givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" classname="cricket_league.Batting_Test" time="0.224"/>
   <system-out><![CDATA[101
 ]]></system-out>
   <system-err><![CDATA[cricket_league.CricketAnalyzerException: /home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.txt
 	at cricket_league.CricketAnalyzer.loadBattingDataFile(CricketAnalyzer.java:25)
-	at cricket_league.Batting_Test.givenBattingWrongCsvFile_shouldThrowException(Batting_Test.java:30)
+	at cricket_league.Batting_Test.givenBattingWrongCsvFile_shouldThrowException(Batting_Test.java:27)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,7 +60,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:834)
 cricket_league.CricketAnalyzerException: Error capturing CSV header!
 	at cricket_league.CricketAnalyzer.loadBattingDataFile(CricketAnalyzer.java:30)
-	at cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException(Batting_Test.java:43)
+	at cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException(Batting_Test.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,7 +110,7 @@ cricket_league.CricketAnalyzerException: Error capturing CSV header!
 	at java.base/java.lang.Thread.run(Thread.java:834)
 cricket_league.CricketAnalyzerException: Error capturing CSV header!
 	at cricket_league.CricketAnalyzer.loadBattingDataFile(CricketAnalyzer.java:30)
-	at cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException(Batting_Test.java:43)
+	at cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException(Batting_Test.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
