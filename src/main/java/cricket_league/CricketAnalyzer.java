@@ -16,20 +16,27 @@ public class CricketAnalyzer {
 
     List<IPLBattingCsv> iplBattingCsvList = new ArrayList<>();
 
-    public int loadBattingDataFile(String csvFilePath) {
-        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))){
+    public int loadBattingDataFile(String csvFilePath) throws CricketAnalyzerException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            iplBattingCsvList = csvBuilder.getCSVFileList(reader,IPLBattingCsv.class);
+            iplBattingCsvList = csvBuilder.getCSVFileList(reader, IPLBattingCsv.class);
             return iplBattingCsvList.size();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new CricketAnalyzerException(e.getMessage(),
+                    CricketAnalyzerException.ExceptionType.CENSUS_FILE_PROBLEM);
         } catch (CsvBuilderException e) {
-            e.printStackTrace();
+            throw new CricketAnalyzerException(e.getMessage(), e.type.name());
+        } catch (RuntimeException e) {
+            throw new CricketAnalyzerException(e.getMessage(),
+                    CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA);
         }
-        return 0;
     }
 
-    public List getTopBattingAverages() {
+    public List getTopBattingAverages() throws CricketAnalyzerException{
+        if (iplBattingCsvList.size()==0){
+            throw new CricketAnalyzerException("Null pointer Exception",
+                    CricketAnalyzerException.ExceptionType.NULL_POINTER_EXCEPTION);
+        }
         iplBattingCsvList = iplBattingCsvList.stream()
                 .sorted((data1,data2) -> data1.avg - data2.avg > 0 ? -1 : 1)
                 .collect(Collectors.toList());
