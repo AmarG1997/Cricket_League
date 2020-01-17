@@ -67,4 +67,14 @@ public class CricketAnalyzer {
                 .collect(Collectors.toList());
         return iplBattingCsvList;
     }
+
+    public List getMost6sand4sWithStrikeRate() {
+        Comparator<IPLBattingCsv> comparator = (data1,data2) -> (data2.sixes*6+data2.fours*4) - (data1.sixes*6 + data1.fours*4);
+        comparator = comparator.thenComparing((data1,data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1);
+        iplBattingCsvList = iplBattingCsvList.stream()
+                .sorted(comparator)
+                .collect(Collectors.toList());
+        return iplBattingCsvList;
+
+    }
 }

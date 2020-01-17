@@ -70,4 +70,13 @@ public class Batting_Test {
         Assert.assertEquals("Andre Russell",list.get(0).player);
         Assert.assertEquals("Tim Southee",list.get(100).player);
     }
+
+    @Test
+    public void givenBattingCsvFile_shouldReturnMost6sand4sWithStrikeRates() throws CricketAnalyzerException{
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
+        cricketAnalyzer.loadBattingDataFile(IPL_2019_BATTING_FILE_PATH);
+        List<IPLBattingCsv> list = cricketAnalyzer.getMost6sand4sWithStrikeRate();
+        Assert.assertEquals("Andre Russell",list.get(0).player);
+        Assert.assertEquals("Shakib Al Hasan",list.get(100).player);
+    }
 }
