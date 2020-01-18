@@ -4,7 +4,7 @@ public class CricketAnalyzerException extends  Exception{
 
     public enum ExceptionType {
 
-        CENSUS_FILE_PROBLEM,INCORRECT_FILE_DATA,NULL_POINTER_EXCEPTION,NO_SUCH_COUNTRY;
+        FILE_PROBLEM,INCORRECT_FILE_DATA,NULL_POINTER_EXCEPTION,NO_SUCH_COUNTRY;
     }
 
     public ExceptionType type;

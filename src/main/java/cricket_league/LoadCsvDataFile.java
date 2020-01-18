@@ -22,7 +22,7 @@ public class LoadCsvDataFile {
             return iplBattingCsvList;
         } catch (IOException e) {
             throw new CricketAnalyzerException(e.getMessage(),
-                    CricketAnalyzerException.ExceptionType.CENSUS_FILE_PROBLEM);
+                    CricketAnalyzerException.ExceptionType.FILE_PROBLEM);
         } catch (CsvBuilderException e) {
             throw new CricketAnalyzerException(e.getMessage(), e.type.name());
         } catch (RuntimeException e) {
