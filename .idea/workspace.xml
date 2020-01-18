@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffe14e68-1eb3-41d4-a580-018e96c111f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cricket_league/LoadCsvDataFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java" afterDir="false" />
     </list>
@@ -56,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="349">
+              <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="259">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -387,9 +385,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnGreatAvgWithBestStrikeRate - 2020.01.18 at 10h 38m 10s.xml">
-      <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnGreatAvgWithBestStrikeRate" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="Batting_Test_givenBattingCsvFile_shouldReturnMost6sand4sWithStrikeRates - 2020.01.18 at 10h 43m 48s.xml">
       <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnMost6sand4sWithStrikeRates" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -415,6 +410,9 @@
       <configuration name="Batting_Test.givenBattingCsvFile_shouldReturnCsvFileData" configurationId="GradleRunConfiguration" />
     </history-entry>
     <history-entry file="Batting_Test - 2020.01.18 at 11h 11m 40s.xml">
+      <configuration name="Batting_Test" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Batting_Test - 2020.01.18 at 11h 37m 44s.xml">
       <configuration name="Batting_Test" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
@@ -542,10 +540,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        <state relative-caret-position="349">
+          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -562,10 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricket_league/CricketAnalyzer.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cricket_league/Batting_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="259">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
