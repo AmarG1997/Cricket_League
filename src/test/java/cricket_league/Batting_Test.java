@@ -16,7 +16,6 @@ public class Batting_Test {
     public void givenBattingCsvFile_shouldReturnCsvFileData() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
         int noOfRecords = cricketAnalyzer.loadBattingDataFile(IPL_2019_BATTING_FILE_PATH);
-        System.out.println(noOfRecords);
         Assert.assertEquals(101,noOfRecords);
     }
 
@@ -78,5 +77,14 @@ public class Batting_Test {
         List<IPLBattingCsv> list = cricketAnalyzer.getMost6sand4sWithStrikeRate();
         Assert.assertEquals("Andre Russell",list.get(0).player);
         Assert.assertEquals("Shakib Al Hasan",list.get(100).player);
+    }
+
+    @Test
+    public void givenBattingCsvFile_shouldReturnGreatAvgWithBestStrikeRate() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
+        cricketAnalyzer.loadBattingDataFile(IPL_2019_BATTING_FILE_PATH);
+        List<IPLBattingCsv>list = cricketAnalyzer.getGreatAvgWithBestStrikeRate();
+        Assert.assertEquals("MS Dhoni",list.get(0).player);
+        Assert.assertEquals("Tim Southee",list.get(100).player);
     }
 }

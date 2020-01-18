@@ -66,19 +66,4 @@ public class IPLBattingCsv {
                 '}';
     }
 
-    public String getPlayer() {
-        return player;
-    }
-
-    public double getStrikeRate() {
-        return strikeRate;
-    }
-
-    public int getFours() {
-        return fours;
-    }
-
-    public int getSixes() {
-        return sixes;
-    }
 }

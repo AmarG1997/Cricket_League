@@ -77,4 +77,12 @@ public class CricketAnalyzer {
         return iplBattingCsvList;
 
     }
+
+    public List getGreatAvgWithBestStrikeRate() {
+        Comparator<IPLBattingCsv> comparator = ((data1,data2) -> data1.avg - data2.avg > 0 ? -1 :data1.avg - data2.avg < 0 ? 1 : 0);
+        comparator = comparator.thenComparing((data1,data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1);
+        Collections.sort(iplBattingCsvList,comparator);
+        System.out.println(iplBattingCsvList);
+        return iplBattingCsvList;
+    }
 }
