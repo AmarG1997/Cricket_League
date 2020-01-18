@@ -18,20 +18,10 @@ public class CricketAnalyzer {
 
     List<IPLBattingCsv> iplBattingCsvList = new ArrayList<>();
 
-    public int loadBattingDataFile(String csvFilePath) throws CricketAnalyzerException {
-        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
-            ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            iplBattingCsvList = csvBuilder.getCSVFileList(reader, IPLBattingCsv.class);
-            return iplBattingCsvList.size();
-        } catch (IOException e) {
-            throw new CricketAnalyzerException(e.getMessage(),
-                    CricketAnalyzerException.ExceptionType.CENSUS_FILE_PROBLEM);
-        } catch (CsvBuilderException e) {
-            throw new CricketAnalyzerException(e.getMessage(), e.type.name());
-        } catch (RuntimeException e) {
-            throw new CricketAnalyzerException(e.getMessage(),
-                    CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA);
-        }
+    public int loadCSvDataFile(String csvFilePath) throws CricketAnalyzerException {
+        LoadCsvDataFile loadCsvDataFile = new LoadCsvDataFile();
+        iplBattingCsvList = loadCsvDataFile.loadBattingDataFile(csvFilePath);
+        return iplBattingCsvList.size();
     }
 
     public List getTopBattingAverages() throws CricketAnalyzerException{
