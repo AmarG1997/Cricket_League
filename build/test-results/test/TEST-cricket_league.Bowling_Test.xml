@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricket_league.Batting_Test" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-01-20T11:04:24" hostname="admin1-HP-EliteBook-Folio-9480m" time="2.172">
+<testsuite name="cricket_league.Bowling_Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-20T11:19:46" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.676">
   <properties/>
-  <testcase name="givenBattingCsvFile_shouldReturnGreatRunsWithBestAverage" classname="cricket_league.Batting_Test" time="0.644"/>
-  <testcase name="givenBattingCsvFile_shouldReturnMost6sand4s" classname="cricket_league.Batting_Test" time="0.213"/>
-  <testcase name="givenBattingCsvFile_shouldReturnMost6sand4sWithStrikeRates" classname="cricket_league.Batting_Test" time="0.219"/>
-  <testcase name="givenBattingWrongCsvFile_shouldThrowException" classname="cricket_league.Batting_Test" time="0.016"/>
-  <testcase name="givenBattingCsvFile_shouldReturnCsvFileData" classname="cricket_league.Batting_Test" time="0.23"/>
-  <testcase name="givenBattingWrongCsvFileHeader_shouldThrowException" classname="cricket_league.Batting_Test" time="0.118"/>
-  <testcase name="givenBattingCsvFile_shouldReturnTopBattingAverages" classname="cricket_league.Batting_Test" time="0.292"/>
-  <testcase name="givenBattingCsvFile_shouldReturnGreatAvgWithBestStrikeRate" classname="cricket_league.Batting_Test" time="0.249"/>
-  <testcase name="givenBattingCsvFile_shouldReturnTopBattingStrikingGRates" classname="cricket_league.Batting_Test" time="0.187"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[cricket_league.CricketAnalyzerException: /home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.txt
-	at cricket_league.LoadCSVDataFile.loadBattingDataFile(LoadCSVDataFile.java:25)
-	at cricket_league.CricketAnalyzer.loadBattingDataFile(CricketAnalyzer.java:13)
-	at cricket_league.Batting_Test.givenBattingWrongCsvFile_shouldThrowException(Batting_Test.java:26)
+  <testcase name="givenBowlingWrongCsvFileHeader_shouldThrowException" classname="cricket_league.Bowling_Test" time="0.143"/>
+  <testcase name="givenBowlingWrongCsvFileType_shouldThrowException" classname="cricket_league.Bowling_Test" time="0.007"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnCsvFileData" classname="cricket_league.Bowling_Test" time="0.525"/>
+  <system-out><![CDATA[99
+]]></system-out>
+  <system-err><![CDATA[cricket_league.CricketAnalyzerException: Error capturing CSV header!
+	at cricket_league.LoadCSVDataFile.loadBowlingDataFile(LoadCSVDataFile.java:46)
+	at cricket_league.CricketAnalyzer.loadBowlingDataFile(CricketAnalyzer.java:19)
+	at cricket_league.Bowling_Test.givenBowlingWrongCsvFileHeader_shouldThrowException(Bowling_Test.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,9 +58,9 @@
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 cricket_league.CricketAnalyzerException: Error capturing CSV header!
-	at cricket_league.LoadCSVDataFile.loadBattingDataFile(LoadCSVDataFile.java:30)
-	at cricket_league.CricketAnalyzer.loadBattingDataFile(CricketAnalyzer.java:13)
-	at cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException(Batting_Test.java:37)
+	at cricket_league.LoadCSVDataFile.loadBowlingDataFile(LoadCSVDataFile.java:46)
+	at cricket_league.CricketAnalyzer.loadBowlingDataFile(CricketAnalyzer.java:19)
+	at cricket_league.Bowling_Test.givenBowlingWrongCsvFileHeader_shouldThrowException(Bowling_Test.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,10 +108,10 @@ cricket_league.CricketAnalyzerException: Error capturing CSV header!
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-cricket_league.CricketAnalyzerException: Error capturing CSV header!
-	at cricket_league.LoadCSVDataFile.loadBattingDataFile(LoadCSVDataFile.java:30)
-	at cricket_league.CricketAnalyzer.loadBattingDataFile(CricketAnalyzer.java:13)
-	at cricket_league.Batting_Test.givenBattingWrongCsvFileHeader_shouldThrowException(Batting_Test.java:37)
+cricket_league.CricketAnalyzerException: /home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.txt
+	at cricket_league.LoadCSVDataFile.loadBowlingDataFile(LoadCSVDataFile.java:41)
+	at cricket_league.CricketAnalyzer.loadBowlingDataFile(CricketAnalyzer.java:19)
+	at cricket_league.Bowling_Test.givenBowlingWrongCsvFileType_shouldThrowException(Bowling_Test.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

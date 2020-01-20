@@ -20,7 +20,7 @@ public class Batting_Test {
     }
 
     @Test
-    public void givenBattingWrongCsvFile_shouldThrowException()  {
+    public void givenBattingWrongCsvFileType_shouldThrowException()  {
         try{
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
         cricketAnalyzer.loadBattingDataFile(IPL_2019_BATTING_WRONG_FILE_PATH);

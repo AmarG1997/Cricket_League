@@ -17,7 +17,6 @@ public class CricketAnalyzer {
     public int loadBowlingDataFile(String csvFilePath) throws CricketAnalyzerException {
         LoadCSVDataFile loadCsvDataFile = new LoadCSVDataFile();
         iplBowlinglist = loadCsvDataFile.loadBowlingDataFile(csvFilePath);
-        System.out.println(iplBowlinglist.size());
         return iplBowlinglist.size();
     }
 
