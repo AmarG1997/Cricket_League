@@ -2,7 +2,7 @@ package cricket_league;
 
 import com.opencsv.bean.CsvBindByName;
 
-public class IPLBattingCsv {
+public class IPLBatting {
 
     @CsvBindByName(column = "POS", required = true)
     public int pos;

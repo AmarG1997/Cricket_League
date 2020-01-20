@@ -5,27 +5,33 @@ import java.util.stream.Collectors;
 
 public class CricketAnalyzer {
 
-    List<IPLBattingCsv> iplBattingCsvList = new ArrayList<>();
+    List<IPLBatting> iplBattingList = new ArrayList<>();
+    List<IPLBowling> iplBowlinglist = new ArrayList<>();
 
+    public int loadBattingDataFile(String csvFilePath) throws CricketAnalyzerException {
+        LoadCSVDataFile loadCsvDataFile = new LoadCSVDataFile();
+        iplBattingList = loadCsvDataFile.loadBattingDataFile(csvFilePath);
+        return iplBattingList.size();
+    }
 
-    public int loadCSvDataFile(String csvFilePath) throws CricketAnalyzerException {
-        LoadCsvDataFile loadCsvDataFile = new LoadCsvDataFile();
-        iplBattingCsvList = loadCsvDataFile.loadBattingDataFile(csvFilePath);
-        return iplBattingCsvList.size();
+    public int loadBowlingDataFile(String csvFilePath) throws CricketAnalyzerException {
+        LoadCSVDataFile loadCsvDataFile = new LoadCSVDataFile();
+        iplBowlinglist = loadCsvDataFile.loadBowlingDataFile(csvFilePath);
+        System.out.println(iplBowlinglist.size());
+        return iplBowlinglist.size();
     }
 
     public List getSorting(DataSorting.sorting fields) throws CricketAnalyzerException{
-        if (iplBattingCsvList.size()==0){
+        if (iplBattingList.size()==0){
             throw new CricketAnalyzerException("Null pointer Exception",
                     CricketAnalyzerException.ExceptionType.NULL_POINTER_EXCEPTION);
         }
         DataSorting dataSorting = new DataSorting();
-        Comparator<IPLBattingCsv> comparator = dataSorting.getComparator(fields);
-        iplBattingCsvList = iplBattingCsvList.stream()
+        Comparator<IPLBatting> comparator = dataSorting.getComparator(fields);
+        iplBattingList = iplBattingList.stream()
                 .sorted(comparator)
                 .collect(Collectors.toList());
-        System.out.println(iplBattingCsvList);
-        return iplBattingCsvList;
+        return iplBattingList;
     }
 
 }

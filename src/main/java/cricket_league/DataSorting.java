@@ -10,7 +10,7 @@ public class DataSorting {
         AVG,STRIKE_RATE,MOST_6s_4s,MOST_6s_4s_STRIKERATE,BEST_AVG_WITH_STRIKE_RATE,MAX_RUNS,MAX_RUNS_WITH_BEST_AVG
     }
 
-    Map<sorting, Comparator<IPLBattingCsv>> map = new HashMap<>();
+    Map<sorting, Comparator<IPLBatting>> map = new HashMap<>();
 
     public Comparator getComparator(sorting field){
         map.put(sorting.AVG, (data1,data2) -> data1.avg - data2.avg > 0 ? -1 : 1);
