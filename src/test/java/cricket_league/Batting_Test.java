@@ -90,14 +90,12 @@ public class Batting_Test {
         Assert.assertEquals("Tim Southee",list.get(100).player);
     }
 
-    /*@Test
-    public void givenBattingCsvFile_shouldReturnTopBattingAverages1() throws CricketAnalyzerException {
-            CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-            cricketAnalyzer.loadCSvDataFile(IPL_2019_BATTING_FILE_PATH);
-            List<IPLBattingCsv> list = cricketAnalyzer.getTopBattingAverages1(DataSorting.sorting.AVG);
-            Assert.assertTrue(list.get(0).toString().contains("MS Dhoni"));
-            Assert.assertEquals(83.2,list.get(0).avg,0);
-            Assert.assertEquals(0.0,list.get(100).avg,0);
-    }*/
-
+    @Test
+    public void givenBattingCsvFile_shouldReturnGreatRunsWithBestAverage() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
+        cricketAnalyzer.loadCSvDataFile(IPL_2019_BATTING_FILE_PATH);
+        List<IPLBattingCsv> list = cricketAnalyzer.getSorting(DataSorting.sorting.MAX_RUNS_WITH_BEST_AVG);
+        Assert.assertEquals("David Warner ",list.get(0).player);
+        Assert.assertEquals("Tim Southee",list.get(100).player);
+    }
 }
