@@ -59,4 +59,12 @@ public class Bowling_Test {
         Assert.assertEquals(0.0,list.get(98).strikeRate,0);
     }
 
+    @Test
+    public void givenBowlingCsvFile_shouldReturnBestEconomy() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.ECONOMY, CricketAnalyzer.DataFile.BOWLING);
+        Assert.assertEquals(13.5,list.get(0).economy,0);
+        Assert.assertEquals(4.8,list.get(98).economy,0);
+    }
 }
