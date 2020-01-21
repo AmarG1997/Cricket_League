@@ -5,7 +5,7 @@ import com.opencsv.bean.CsvBindByName;
 public class IPLBowling {
 
     @CsvBindByName(column = "POS", required = true)
-     public int pos;
+    public int pos;
 
     @CsvBindByName(column = "PLAYER", required = true)
     public String player;
@@ -49,23 +49,20 @@ public class IPLBowling {
     @Override
     public String toString() {
         return "IPLBowling{" +
-                "pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
-                ", pos='" + pos + '\'' +
+                "pos=" + pos +
+                ", player='" + player + '\'' +
+                ", matches=" + matches +
+                ", innings=" + innings +
+                ", over=" + over +
+                ", runs=" + runs +
+                ", wickets=" + wickets +
+                ", bestBowlingIndex=" + bestBowlingIndex +
+                ", average=" + average +
+                ", economy=" + economy +
+                ", strikeRate=" + strikeRate +
                 ", fourWickets=" + fourWickets +
-                ", pos='" + pos + '\'' +
                 ", fiveWickets=" + fiveWickets +
-                ", pos='" + pos + '\'' +
                 ", nullData='" + nullData + '\'' +
-                ", pos=" + pos +
                 '}';
     }
 }

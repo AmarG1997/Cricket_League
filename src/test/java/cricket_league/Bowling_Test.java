@@ -3,6 +3,8 @@ package cricket_league;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 public class Bowling_Test {
 
     private static final String IPL_2019_BOWLING_FILE_PATH="/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.csv";
@@ -37,5 +39,14 @@ public class Bowling_Test {
             Assert.assertEquals(CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA,e.type);
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void givenBowlingCsvFile_shouldReturnTopBattingAverages() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.AVG, CricketAnalyzer.DataFile.BOWLING);
+        Assert.assertEquals(166.0,list.get(0).average,0);
+        Assert.assertEquals(0.0,list.get(98).average,0);
     }
 }
