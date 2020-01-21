@@ -26,6 +26,7 @@ public class DataSorting {
         }
         if (file.equals(CricketAnalyzer.DataFile.BOWLING)){
             map1.put(sorting.AVG,(data1,data2)->data1.average-data2.average > 0 ? -1 : 1);
+            map1.put(sorting.STRIKE_RATE,(data1,data2)-> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1);
             return map1.get(field);
 
         }

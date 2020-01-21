@@ -42,11 +42,21 @@ public class Bowling_Test {
     }
 
     @Test
-    public void givenBowlingCsvFile_shouldReturnTopBattingAverages() throws CricketAnalyzerException {
+    public void givenBowlingCsvFile_shouldReturnTopBowlingAverages() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
         cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
         List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.AVG, CricketAnalyzer.DataFile.BOWLING);
         Assert.assertEquals(166.0,list.get(0).average,0);
         Assert.assertEquals(0.0,list.get(98).average,0);
     }
+
+    @Test
+    public void givenBowlingCsvFile_shouldReturnTopStrikeRate() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.STRIKE_RATE, CricketAnalyzer.DataFile.BOWLING);
+        Assert.assertEquals(120.0,list.get(0).strikeRate,0);
+        Assert.assertEquals(0.0,list.get(98).strikeRate,0);
+    }
+
 }
