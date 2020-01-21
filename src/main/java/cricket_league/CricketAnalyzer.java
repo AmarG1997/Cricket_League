@@ -9,9 +9,13 @@ public class CricketAnalyzer {
 
     public DataFile dataFile;
 
-    public enum DataFile{ BATTING,BOWLING}
+    public enum DataFile{BATTING,BOWLING}
 
-    public int loadDataFile(String csvFilePath,Class className) throws CricketAnalyzerException {
+    public CricketAnalyzer(DataFile dataFile) {
+        this.dataFile = dataFile;
+    }
+
+    public int loadDataFile(String csvFilePath, Class className) throws CricketAnalyzerException {
         LoadCSVDataFile loadCsvDataFile = new LoadCSVDataFile();
         list = loadCsvDataFile.loadDataFile(className,csvFilePath);
         return list.size();
@@ -22,12 +26,11 @@ public class CricketAnalyzer {
             throw new CricketAnalyzerException("Null pointer Exception",
                     CricketAnalyzerException.ExceptionType.NULL_POINTER_EXCEPTION);
         }
-        DataSorting dataSorting = new DataSorting();
-        Comparator<CricketLeagueDao> comparator = dataSorting.getComparator(fields,file);
-        list = list.stream()
+        Comparator<CricketLeagueDao> comparator = new DataSorting().getComparator(fields,file);
+        List list1 = list.stream()
                 .sorted(comparator)
+                .map(cricketLeagueDao -> cricketLeagueDao.getCricketDTO(dataFile))
                 .collect(Collectors.toList());
-        return list;
+        return list1;
     }
-
 }

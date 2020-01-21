@@ -46,6 +46,28 @@ public class IPLBatting {
     @CsvBindByName(column = "6s", required = true)
     public int sixes;
 
+    public IPLBatting(int pos, String player, int matches, int inns, int notOut,
+                      int runs, int highScore, double average, int ballFaced,
+                      double strikeRate, int centuries, int fifties, int fours, int sixs) {
+        this.pos=pos;
+        this.player=player;
+        this.matches=matches;
+        this.inns=inns;
+        this.notOut=notOut;
+        this.runs=runs;
+        this.highScore=highScore;
+        this.strikeRate=strikeRate;
+        this.centuries=centuries;
+        this.halfCenturies=fifties;
+        this.fours=fours;
+        this.sixes=sixs;
+        this.avg=average;
+        this.ballFaced=ballFaced;
+    }
+
+    public IPLBatting() {
+    }
+
     @Override
     public String toString() {
         return "{" +

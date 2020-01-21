@@ -27,36 +27,36 @@ public class CricketLeagueDao {
     public int fiveWickets;
 
     public CricketLeagueDao(IPLBatting iplBatting) {
-        pos=iplBatting.pos;
-        player=iplBatting.player;
-        matches=iplBatting.matches;
-        inns=iplBatting.inns;
-        notOut=iplBatting.notOut;
-        runs=iplBatting.runs;
-        highScore=iplBatting.highScore;
-        average=iplBatting.avg;
-        ballFaced=iplBatting.ballFaced;
-        strikeRate=iplBatting.strikeRate;
-        centuries=iplBatting.centuries;
-        fifties=iplBatting.halfCenturies;
-        fours=iplBatting.fours;
-        sixs=iplBatting.sixes;
+        pos = iplBatting.pos;
+        player = iplBatting.player;
+        matches = iplBatting.matches;
+        inns = iplBatting.inns;
+        notOut = iplBatting.notOut;
+        runs = iplBatting.runs;
+        highScore = iplBatting.highScore;
+        average = iplBatting.avg;
+        ballFaced = iplBatting.ballFaced;
+        strikeRate = iplBatting.strikeRate;
+        centuries = iplBatting.centuries;
+        fifties = iplBatting.halfCenturies;
+        fours = iplBatting.fours;
+        sixs = iplBatting.sixes;
     }
 
     public CricketLeagueDao(IPLBowling iplBowling) {
-      pos=iplBowling.pos;
-      player=iplBowling.player;
-      matches=iplBowling.matches;
-      inns=iplBowling.innings;
-      over=iplBowling.over;
-      runs=iplBowling.runs;
-      wickets=iplBowling.wickets;
-      bestBowlingIndex=iplBowling.bestBowlingIndex;
-      average=iplBowling.average;
-      economy=iplBowling.economy;
-      strikeRate=iplBowling.strikeRate;
-      fourWickets=iplBowling.fourWickets;
-      fiveWickets=iplBowling.fiveWickets;
+        pos = iplBowling.pos;
+        player = iplBowling.player;
+        matches = iplBowling.matches;
+        inns = iplBowling.innings;
+        over = iplBowling.over;
+        runs = iplBowling.runs;
+        wickets = iplBowling.wickets;
+        bestBowlingIndex = iplBowling.bestBowlingIndex;
+        average = iplBowling.average;
+        economy = iplBowling.economy;
+        strikeRate = iplBowling.strikeRate;
+        fourWickets = iplBowling.fourWickets;
+        fiveWickets = iplBowling.fiveWickets;
     }
 
     @Override
@@ -83,5 +83,15 @@ public class CricketLeagueDao {
                 ", fourWickets=" + fourWickets +
                 ", fiveWickets=" + fiveWickets +
                 '}';
+    }
+
+
+    public CricketLeagueDao() {
+    }
+
+    public Object getCricketDTO(CricketAnalyzer.DataFile file) {
+        if (file.equals(CricketAnalyzer.DataFile.BATTING))
+            return new IPLBatting(pos, player, matches, inns, notOut, runs, highScore, average, ballFaced, strikeRate, centuries, fifties, fours, sixs);
+        return new IPLBowling(pos, player, matches, inns, over, runs, wickets, bestBowlingIndex, average, economy, strikeRate, fourWickets, fiveWickets);
     }
 }

@@ -41,13 +41,4 @@ public class LoadCSVDataFile {
         }
         return fileData;
     }
-
 }
-// if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.csv")){
-//                fileData = csvBuilder.getCSVFileList(reader, IPLBatting.class);
-//                StreamSupport.stream(fileData.spliterator())
-//                return fileData;
-//            }
-//            if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.csv"))
-//                fileData = csvBuilder.getCSVFileList(reader, IPLBowling.class);
-//                return fileData;

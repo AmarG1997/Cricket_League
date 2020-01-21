@@ -46,6 +46,24 @@ public class IPLBowling {
     @CsvBindByName(column = "ND")
     public String nullData;
 
+    public IPLBowling(int pos, String player, int matches, int inns, double over,
+                      int runs, int wickets, int bestBowlingIndex, double average,
+                      double economy, double strikeRate, int fourWickets, int fiveWickets) {
+        this.pos=pos;
+        this.player=player;
+        this.matches=matches;
+        this.innings=inns;
+        this.over=over;
+        this.runs=runs;
+        this.wickets=wickets;
+        this.bestBowlingIndex=bestBowlingIndex;
+        this.average=average;
+        this.economy=economy;
+        this.strikeRate=strikeRate;
+        this.fiveWickets=fiveWickets;
+        this.fourWickets=fourWickets;
+    }
+
     @Override
     public String toString() {
         return "IPLBowling{" +
@@ -64,5 +82,8 @@ public class IPLBowling {
                 ", fiveWickets=" + fiveWickets +
                 ", nullData='" + nullData + '\'' +
                 '}';
+    }
+
+    public IPLBowling() {
     }
 }
