@@ -76,4 +76,13 @@ public class Bowling_Test {
         Assert.assertEquals("Kagiso Rabada",list.get(0).player.trim());
         Assert.assertEquals("Krishnappa Gowtham",list.get(98).player.trim());
     }
+
+    @Test
+    public void givenBowlingCsvFile_shouldReturnGreatBowlingAverage_With_StrikeRate() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer(CricketAnalyzer.DataFile.BOWLING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH, CricketAnalyzer.DataFile.BOWLING);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.MOST_STRIKERATE_WITH_AVERAGE, CricketAnalyzer.DataFile.BOWLING);
+        Assert.assertEquals("Krishnappa Gowtham",list.get(0).player.trim());
+        Assert.assertEquals("Liam Livingstone",list.get(98).player.trim());
+    }
 }
