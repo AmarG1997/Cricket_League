@@ -15,9 +15,8 @@ public class CricketAnalyzer {
         this.dataFile = dataFile;
     }
 
-    public int loadDataFile(String csvFilePath, Class className) throws CricketAnalyzerException {
-        LoadCSVDataFile loadCsvDataFile = new LoadCSVDataFile();
-        list = loadCsvDataFile.loadDataFile(className,csvFilePath);
+    public int loadDataFile(String csvFilePath, DataFile dataFile) throws CricketAnalyzerException {
+        list=CricketLoaderFactory.getLoadDataFile(csvFilePath,dataFile);
         return list.size();
     }
 
