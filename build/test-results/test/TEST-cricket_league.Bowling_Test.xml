@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricket_league.Bowling_Test" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-01-21T12:34:14" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.257">
+<testsuite name="cricket_league.Bowling_Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-21T13:17:45" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.522">
   <properties/>
-  <testcase name="givenBowlingCsvFile_shouldReturnTopStrikeRate" classname="cricket_league.Bowling_Test" time="0.618"/>
-  <testcase name="givenBowlingWrongCsvFileHeader_shouldThrowException" classname="cricket_league.Bowling_Test" time="0.033"/>
-  <testcase name="givenBowlingCsvFile_shouldReturnBestEconomy" classname="cricket_league.Bowling_Test" time="0.199"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnBestStrikeRateWith_5w_4w" classname="cricket_league.Bowling_Test" time="0.717"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnTopStrikeRate" classname="cricket_league.Bowling_Test" time="0.185"/>
+  <testcase name="givenBowlingWrongCsvFileHeader_shouldThrowException" classname="cricket_league.Bowling_Test" time="0.034"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnBestEconomy" classname="cricket_league.Bowling_Test" time="0.217"/>
   <testcase name="givenBowlingWrongCsvFileType_shouldThrowException" classname="cricket_league.Bowling_Test" time="0.004"/>
-  <testcase name="givenBowlingCsvFile_shouldReturnTopBowlingAverages" classname="cricket_league.Bowling_Test" time="0.183"/>
-  <testcase name="givenBowlingCsvFile_shouldReturnCsvFileData" classname="cricket_league.Bowling_Test" time="0.218"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnTopBowlingAverages" classname="cricket_league.Bowling_Test" time="0.207"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnCsvFileData" classname="cricket_league.Bowling_Test" time="0.155"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[cricket_league.CricketAnalyzerException: Error capturing CSV header!
 	at cricket_league.LoadCSVDataFile.loadDataFile(LoadCSVDataFile.java:39)

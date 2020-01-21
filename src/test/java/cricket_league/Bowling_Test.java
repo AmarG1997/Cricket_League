@@ -67,4 +67,13 @@ public class Bowling_Test {
         Assert.assertEquals(13.5,list.get(0).economy,0);
         Assert.assertEquals(4.8,list.get(98).economy,0);
     }
+
+    @Test
+    public void givenBowlingCsvFile_shouldReturnBestStrikeRateWith_5w_4w() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer(CricketAnalyzer.DataFile.BOWLING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH, CricketAnalyzer.DataFile.BOWLING);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.MOST_STRIKE_RATE_4W_5W, CricketAnalyzer.DataFile.BOWLING);
+        Assert.assertEquals("Kagiso Rabada",list.get(0).player.trim());
+        Assert.assertEquals("Krishnappa Gowtham",list.get(98).player.trim());
+    }
 }

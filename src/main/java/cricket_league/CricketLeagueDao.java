@@ -85,10 +85,6 @@ public class CricketLeagueDao {
                 '}';
     }
 
-
-    public CricketLeagueDao() {
-    }
-
     public Object getCricketDTO(CricketAnalyzer.DataFile file) {
         if (file.equals(CricketAnalyzer.DataFile.BATTING))
             return new IPLBatting(pos, player, matches, inns, notOut, runs, highScore, average, ballFaced, strikeRate, centuries, fifties, fours, sixs);
