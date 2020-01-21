@@ -13,30 +13,18 @@ import java.util.List;
 
 public class LoadCSVDataFile {
 
-    List<IPLBatting> iplBattingCsvList = new ArrayList<>();
-    List<IPLBowling> iplBowlinglist = new ArrayList<>();
+    List<CricketLeagueDao> fileData = new ArrayList<>();
 
-    public List<IPLBatting> loadBattingDataFile(String csvFilePath) throws CricketAnalyzerException {
+    public <E> List loadDataFile(String csvFilePath) throws CricketAnalyzerException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            iplBattingCsvList = csvBuilder.getCSVFileList(reader, IPLBatting.class);
-            return iplBattingCsvList;
-        } catch (IOException e) {
-            throw new CricketAnalyzerException(e.getMessage(),
-                    CricketAnalyzerException.ExceptionType.FILE_PROBLEM);
-        } catch (CsvBuilderException e) {
-            throw new CricketAnalyzerException(e.getMessage(), e.type.name());
-        } catch (RuntimeException e) {
-            throw new CricketAnalyzerException(e.getMessage(),
-                    CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA);
-        }
-    }
-
-    public List<IPLBowling> loadBowlingDataFile(String csvFilePath) throws CricketAnalyzerException {
-        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
-            ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            iplBowlinglist = csvBuilder.getCSVFileList(reader, IPLBowling.class);
-            return iplBowlinglist;
+            if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.csv")){
+                fileData = csvBuilder.getCSVFileList(reader, IPLBatting.class);
+                return fileData;
+            }
+            if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.csv"))
+                fileData = csvBuilder.getCSVFileList(reader, IPLBowling.class);
+            return fileData;
         } catch (IOException e) {
             throw new CricketAnalyzerException(e.getMessage(),
                     CricketAnalyzerException.ExceptionType.FILE_PROBLEM);

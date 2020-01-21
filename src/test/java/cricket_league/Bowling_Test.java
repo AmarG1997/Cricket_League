@@ -12,7 +12,7 @@ public class Bowling_Test {
     @Test
     public void givenBowlingCsvFile_shouldReturnCsvFileData() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-        int noOfRecords = cricketAnalyzer.loadBowlingDataFile(IPL_2019_BOWLING_FILE_PATH);
+        int noOfRecords = cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
         Assert.assertEquals(99,noOfRecords);
     }
 
@@ -20,7 +20,7 @@ public class Bowling_Test {
     public void givenBowlingWrongCsvFileType_shouldThrowException()  {
         try{
             CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-            cricketAnalyzer.loadBowlingDataFile(IPL_2019_BOWLING_WRONG_FILE_PATH);
+            cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_WRONG_FILE_PATH);
         }catch (CricketAnalyzerException e) {
             e.printStackTrace();
             Assert.assertEquals(CricketAnalyzerException.ExceptionType.FILE_PROBLEM,e.type);
@@ -31,7 +31,7 @@ public class Bowling_Test {
     public void givenBowlingWrongCsvFileHeader_shouldThrowException()  {
         try{
             CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-            cricketAnalyzer.loadBowlingDataFile(IPL_2019_BOWLING_WRONG_HEADER_FILE_PATH);
+            cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_WRONG_HEADER_FILE_PATH);
         }catch (CricketAnalyzerException e) {
             e.printStackTrace();
             Assert.assertEquals(CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA,e.type);
