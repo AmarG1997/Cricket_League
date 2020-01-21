@@ -11,9 +11,9 @@ public class CricketAnalyzer {
 
     public enum DataFile{ BATTING,BOWLING}
 
-    public int loadDataFile(String csvFilePath) throws CricketAnalyzerException {
+    public int loadDataFile(String csvFilePath,Class className) throws CricketAnalyzerException {
         LoadCSVDataFile loadCsvDataFile = new LoadCSVDataFile();
-        list = loadCsvDataFile.loadDataFile(csvFilePath);
+        list = loadCsvDataFile.loadDataFile(className,csvFilePath);
         return list.size();
     }
 

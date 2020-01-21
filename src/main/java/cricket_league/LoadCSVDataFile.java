@@ -10,21 +10,26 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.StreamSupport;
 
 public class LoadCSVDataFile {
 
     List<CricketLeagueDao> fileData = new ArrayList<>();
 
-    public <E> List loadDataFile(String csvFilePath) throws CricketAnalyzerException {
+    public<E>  List loadDataFile(Class IPLClass ,String csvFilePath) throws CricketAnalyzerException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.csv")){
-                fileData = csvBuilder.getCSVFileList(reader, IPLBatting.class);
-                return fileData;
+            List<E> IPLdataList = csvBuilder.getCSVFileList(reader,IPLClass);
+            if (IPLClass.getName().equals("cricket_league.IPLBatting")){
+                StreamSupport.stream(IPLdataList.spliterator(),false)
+                        .map(IPLBatting.class::cast)
+                        .forEach(CricketCSV -> fileData.add(new CricketLeagueDao(CricketCSV)));
             }
-            if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.csv"))
-                fileData = csvBuilder.getCSVFileList(reader, IPLBowling.class);
-            return fileData;
+            if (IPLClass.getName().equals("cricket_league.IPLBowling")){
+                StreamSupport.stream(IPLdataList.spliterator(),false)
+                        .map(IPLBowling.class::cast)
+                        .forEach(CricketCSV -> fileData.add(new CricketLeagueDao(CricketCSV)));
+            }
         } catch (IOException e) {
             throw new CricketAnalyzerException(e.getMessage(),
                     CricketAnalyzerException.ExceptionType.FILE_PROBLEM);
@@ -34,6 +39,15 @@ public class LoadCSVDataFile {
             throw new CricketAnalyzerException(e.getMessage(),
                     CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA);
         }
+        return fileData;
     }
 
 }
+// if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.csv")){
+//                fileData = csvBuilder.getCSVFileList(reader, IPLBatting.class);
+//                StreamSupport.stream(fileData.spliterator())
+//                return fileData;
+//            }
+//            if (csvFilePath.equals("/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.csv"))
+//                fileData = csvBuilder.getCSVFileList(reader, IPLBowling.class);
+//                return fileData;

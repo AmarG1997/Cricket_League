@@ -14,7 +14,7 @@ public class Bowling_Test {
     @Test
     public void givenBowlingCsvFile_shouldReturnCsvFileData() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-        int noOfRecords = cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
+        int noOfRecords = cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH,IPLBowling.class);
         Assert.assertEquals(99,noOfRecords);
     }
 
@@ -22,7 +22,7 @@ public class Bowling_Test {
     public void givenBowlingWrongCsvFileType_shouldThrowException()  {
         try{
             CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-            cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_WRONG_FILE_PATH);
+            cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_WRONG_FILE_PATH,IPLBowling.class);
         }catch (CricketAnalyzerException e) {
             e.printStackTrace();
             Assert.assertEquals(CricketAnalyzerException.ExceptionType.FILE_PROBLEM,e.type);
@@ -33,7 +33,7 @@ public class Bowling_Test {
     public void givenBowlingWrongCsvFileHeader_shouldThrowException()  {
         try{
             CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-            cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_WRONG_HEADER_FILE_PATH);
+            cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_WRONG_HEADER_FILE_PATH,IPLBowling.class);
         }catch (CricketAnalyzerException e) {
             e.printStackTrace();
             Assert.assertEquals(CricketAnalyzerException.ExceptionType.INCORRECT_FILE_DATA,e.type);
@@ -44,8 +44,8 @@ public class Bowling_Test {
     @Test
     public void givenBowlingCsvFile_shouldReturnTopBowlingAverages() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
-        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.AVG, CricketAnalyzer.DataFile.BOWLING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH,IPLBowling.class);
+        List<CricketLeagueDao> list = cricketAnalyzer.getSorting(DataSorting.sorting.AVG, CricketAnalyzer.DataFile.BOWLING);
         Assert.assertEquals(166.0,list.get(0).average,0);
         Assert.assertEquals(0.0,list.get(98).average,0);
     }
@@ -53,8 +53,8 @@ public class Bowling_Test {
     @Test
     public void givenBowlingCsvFile_shouldReturnTopStrikeRate() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
-        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.STRIKE_RATE, CricketAnalyzer.DataFile.BOWLING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH,IPLBowling.class);
+        List<CricketLeagueDao> list = cricketAnalyzer.getSorting(DataSorting.sorting.STRIKE_RATE, CricketAnalyzer.DataFile.BOWLING);
         Assert.assertEquals(120.0,list.get(0).strikeRate,0);
         Assert.assertEquals(0.0,list.get(98).strikeRate,0);
     }
@@ -62,8 +62,8 @@ public class Bowling_Test {
     @Test
     public void givenBowlingCsvFile_shouldReturnBestEconomy() throws CricketAnalyzerException {
         CricketAnalyzer cricketAnalyzer = new CricketAnalyzer();
-        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH);
-        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.ECONOMY, CricketAnalyzer.DataFile.BOWLING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH,IPLBowling.class);
+        List<CricketLeagueDao> list = cricketAnalyzer.getSorting(DataSorting.sorting.ECONOMY, CricketAnalyzer.DataFile.BOWLING);
         Assert.assertEquals(13.5,list.get(0).economy,0);
         Assert.assertEquals(4.8,list.get(98).economy,0);
     }
