@@ -8,7 +8,7 @@ public class DataSorting {
 
     public enum sorting{
         AVG,STRIKE_RATE,MOST_6s_4s,MOST_6s_4s_STRIKERATE,BEST_AVG_WITH_STRIKE_RATE,MAX_RUNS,MAX_RUNS_WITH_BEST_AVG,
-        ECONOMY,MOST_STRIKE_RATE_4W_5W,MOST_4W_5W,MOST_STRIKERATE_WITH_AVERAGE;
+        ECONOMY,MOST_STRIKE_RATE_4W_5W,MOST_4W_5W,MOST_STRIKERATE_WITH_AVERAGE,MAX_WICKETS_WITH_BEST_BOWLING_AVG,MOST_WKTS
     }
 
     Map<sorting, Comparator<CricketLeagueDao>> map = new HashMap<>();
@@ -28,9 +28,11 @@ public class DataSorting {
             map.put(sorting.AVG,(data1,data2)->data1.average-data2.average > 0 ? -1 : 1);
             map.put(sorting.STRIKE_RATE,(data1,data2)-> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1);
             map.put(sorting.ECONOMY,(data1,data2)-> data1.economy - data2.economy > 0 ? -1 : 1);
+            map.put(sorting.MOST_WKTS,(data1,data2)->data1.wickets - data2.wickets > 0 ? -1 : 1);
             map.put(sorting.MOST_4W_5W,(data1,data2)-> (data1.fiveWickets * 5 + data1.fourWickets * 4) - (data2.fiveWickets * 5 + data2.fourWickets * 4));
             map.put(sorting.MOST_STRIKE_RATE_4W_5W,map.get(sorting.MOST_4W_5W).thenComparing(map.get(sorting.STRIKE_RATE)).reversed());
             map.put(sorting.MOST_STRIKERATE_WITH_AVERAGE,map.get(sorting.AVG).thenComparing(map.get(sorting.STRIKE_RATE)));
+            map.put(sorting.MAX_WICKETS_WITH_BEST_BOWLING_AVG,map.get(sorting.MOST_WKTS).thenComparing(map.get(sorting.AVG)));
             return map.get(field);
 
         }

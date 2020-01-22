@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricket_league.Bowling_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-21T13:44:44" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.606">
+<testsuite name="cricket_league.Bowling_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-22T06:15:54" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.597">
   <properties/>
-  <testcase name="givenBowlingCsvFile_shouldReturnGreatBowlingAverage_With_StrikeRate" classname="cricket_league.Bowling_Test" time="0.606"/>
+  <testcase name="givenBowlingCsvFile_shouldReturnMaxWickets_With_BestBowlingaverage" classname="cricket_league.Bowling_Test" time="0.597"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

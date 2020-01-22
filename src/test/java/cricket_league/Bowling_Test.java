@@ -85,4 +85,13 @@ public class Bowling_Test {
         Assert.assertEquals("Krishnappa Gowtham",list.get(0).player.trim());
         Assert.assertEquals("Liam Livingstone",list.get(98).player.trim());
     }
+
+    @Test
+    public void givenBowlingCsvFile_shouldReturnMaxWickets_With_BestBowlingaverage() throws CricketAnalyzerException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer(CricketAnalyzer.DataFile.BOWLING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BOWLING_FILE_PATH, CricketAnalyzer.DataFile.BOWLING);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.MAX_WICKETS_WITH_BEST_BOWLING_AVG, CricketAnalyzer.DataFile.BOWLING);
+        Assert.assertEquals("Imran Tahir",list.get(0).player.trim());
+        Assert.assertEquals("Liam Livingstone",list.get(98).player.trim());
+    }
 }
