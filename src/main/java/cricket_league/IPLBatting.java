@@ -47,7 +47,7 @@ public class IPLBatting {
     public int sixes;
 
     public IPLBatting(int pos, String player, int matches, int inns, int notOut,
-                      int runs, int highScore, double average, int ballFaced,
+                      int runs, int highScore, double Battingaverage, int ballFaced,
                       double strikeRate, int centuries, int fifties, int fours, int sixs) {
         this.pos=pos;
         this.player=player;
@@ -61,7 +61,7 @@ public class IPLBatting {
         this.halfCenturies=fifties;
         this.fours=fours;
         this.sixes=sixs;
-        this.avg=average;
+        this.avg=Battingaverage;
         this.ballFaced=ballFaced;
     }
 
@@ -70,14 +70,14 @@ public class IPLBatting {
 
     @Override
     public String toString() {
-        return "{" +
+        return "IPLBatting{" +
                 "pos=" + pos +
                 ", player='" + player + '\'' +
                 ", matches=" + matches +
                 ", inns=" + inns +
                 ", notOut=" + notOut +
                 ", runs=" + runs +
-                ", highScore='" + highScore + '\'' +
+                ", highScore=" + highScore +
                 ", avg=" + avg +
                 ", ballFaced=" + ballFaced +
                 ", strikeRate=" + strikeRate +
@@ -87,5 +87,4 @@ public class IPLBatting {
                 ", sixes=" + sixes +
                 '}';
     }
-
 }

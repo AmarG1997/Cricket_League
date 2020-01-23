@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +18,7 @@ public abstract class CricketAdapter {
     Map<String,CricketLeagueDao> fileData = new HashMap<>();
 
 
-    public abstract <E>Map<String,CricketLeagueDao> loadDataFile(String... csvFilePath) throws CricketAnalyzerException;
+    public abstract <E>Map<String,CricketLeagueDao> loadDataFile(String... csvFilePath) throws CricketAnalyzerException, IOException, CsvBuilderException;
 
     public<E>  Map<String,CricketLeagueDao> loadDataFile(Class IPLClass ,String csvFilePath) throws CricketAnalyzerException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {

@@ -12,7 +12,8 @@ public class CricketLeagueDao {
     public int notOut;
     public int runs;
     public int highScore;
-    public double average;
+    public double Baverage;
+    public double baverage;
     public int ballFaced;
     public double strikeRate;
     public int centuries;
@@ -34,7 +35,7 @@ public class CricketLeagueDao {
         notOut = iplBatting.notOut;
         runs = iplBatting.runs;
         highScore = iplBatting.highScore;
-        average = iplBatting.avg;
+        Baverage = iplBatting.avg;
         ballFaced = iplBatting.ballFaced;
         strikeRate = iplBatting.strikeRate;
         centuries = iplBatting.centuries;
@@ -52,7 +53,7 @@ public class CricketLeagueDao {
         runs = iplBowling.runs;
         wickets = iplBowling.wickets;
         bestBowlingIndex = iplBowling.bestBowlingIndex;
-        average = iplBowling.average;
+        baverage = iplBowling.average;
         economy = iplBowling.economy;
         strikeRate = iplBowling.strikeRate;
         fourWickets = iplBowling.fourWickets;
@@ -73,7 +74,8 @@ public class CricketLeagueDao {
                 ", notOut=" + notOut +
                 ", runs=" + runs +
                 ", highScore=" + highScore +
-                ", average=" + average +
+                ", Baverage=" + Baverage +
+                ", baverage=" + baverage +
                 ", ballFaced=" + ballFaced +
                 ", strikeRate=" + strikeRate +
                 ", centuries=" + centuries +
@@ -91,7 +93,7 @@ public class CricketLeagueDao {
 
     public Object getCricketDTO(CricketAnalyzer.DataFile file) {
         if (file.equals(CricketAnalyzer.DataFile.BATTING))
-            return new IPLBatting(pos, player, matches, inns, notOut, runs, highScore, average, ballFaced, strikeRate, centuries, fifties, fours, sixs);
-        return new IPLBowling(pos, player, matches, inns, over, runs, wickets, bestBowlingIndex, average, economy, strikeRate, fourWickets, fiveWickets);
+            return new IPLBatting(pos, player, matches, inns, notOut, runs, highScore, Baverage, ballFaced, strikeRate, centuries, fifties, fours, sixs);
+        return new IPLBowling(pos, player, matches, inns, over, runs, wickets, bestBowlingIndex, baverage, economy, strikeRate, fourWickets, fiveWickets);
     }
 }
