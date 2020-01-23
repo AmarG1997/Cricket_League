@@ -9,7 +9,7 @@ public class DataSorting {
     public enum sorting {
         AVG, STRIKE_RATE, MOST_6s_4s, MOST_6s_4s_STRIKERATE, BEST_AVG_WITH_STRIKE_RATE, MAX_RUNS, MAX_RUNS_WITH_BEST_AVG,
         ECONOMY, MOST_STRIKE_RATE_4W_5W, MOST_4W_5W, MOST_STRIKERATE_WITH_AVERAGE, MAX_WICKETS_WITH_BEST_BOWLING_AVG, MOST_WKTS,
-        BATTING_BOWLING_AVG, BAVG;
+        BATTING_BOWLING_AVG, BAVG,BEST_ALL_ROUNDER;
     }
 
     Map<sorting, Comparator<CricketLeagueDao>> map = new HashMap<>();
@@ -40,6 +40,21 @@ public class DataSorting {
             map.put(sorting.AVG, (data1, data2) -> data1.Baverage - data2.Baverage > 0 ? -1 : 1);
             map.put(sorting.BAVG, (data1, data2) -> data1.baverage - data2.baverage > 0 ? -1 : 1);
             map.put(sorting.BATTING_BOWLING_AVG, map.get(sorting.AVG).thenComparing(map.get(sorting.AVG)));
+////            Comparator<CricketLeagueDao>BEST_ALL_ROUNDER=Comparator.comparing(CricketLeagueDao ->
+////            {
+////                if (CricketLeagueDao.wickets>7 && CricketLeagueDao.runs>150)
+////                    return CricketLeagueDao.runs+(CricketLeagueDao.wickets*120);
+////                    return 0;
+////            });
+////            return map.get(BEST_ALL_ROUNDER);
+//            map.put(sorting.BEST_ALL_ROUNDER,(data1,data2)->
+            Comparator<CricketLeagueDao>BEST_ALL_ROUNDER=Comparator.comparing(CricketLeagueDao ->
+            {
+                if (CricketLeagueDao.wickets>7 && CricketLeagueDao.runs>150)
+                    return CricketLeagueDao.runs+(CricketLeagueDao.wickets*20);
+                    return 0;
+            });
+            map.put(field.BEST_ALL_ROUNDER,BEST_ALL_ROUNDER.reversed());
             return map.get(field);
         }
         return null;

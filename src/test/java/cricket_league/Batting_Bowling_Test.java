@@ -20,4 +20,12 @@ public class Batting_Bowling_Test {
         Assert.assertEquals("MS Dhoni",list.get(0).player.trim());
         Assert.assertEquals("Harpreet Brar",list.get(98).player.trim());
     }
+
+    @Test
+    public void whenGivenBattingAndBowlingFileData_shouldReturnBestAllRounder() throws CricketAnalyzerException, IOException, CsvBuilderException {
+        CricketAnalyzer cricketAnalyzer = new CricketAnalyzer(CricketAnalyzer.DataFile.BATTING);
+        cricketAnalyzer.loadDataFile(IPL_2019_BATTING_FILE_PATH, IPL_2019_BOWLING_FILE_PATH);
+        List<IPLBowling> list = cricketAnalyzer.getSorting(DataSorting.sorting.BEST_ALL_ROUNDER, CricketAnalyzer.DataFile.BATTING_BOWLING);
+        Assert.assertEquals("Andre Russell",list.get(0).player.trim());
+    }
 }

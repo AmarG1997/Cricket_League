@@ -32,7 +32,9 @@ public class BatsmanAdapter extends CricketAdapter {
             List<IPLBowling> IPLdataList = csvBuilder.getCSVFileList(reader,IPLBowling.class);
             StreamSupport.stream(IPLdataList.spliterator(),false)
                         .filter(IPLBowling-> cricketLeagueDaoMap.get(IPLBowling.player)!=null)
-                        .forEach(IPLBowling -> cricketLeagueDaoMap.get(IPLBowling.player).baverage=IPLBowling.average);
+                        .forEach(IPLBowling -> {cricketLeagueDaoMap.get(IPLBowling.player).
+                                baverage=IPLBowling.average;
+                        cricketLeagueDaoMap.get(IPLBowling.player).wickets=IPLBowling.wickets;});
             return this.cricketLeagueDaoMap.size();
             }
 
