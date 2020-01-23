@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class CricketAnalyzer {
 
-    List<CricketLeagueDao> list = new ArrayList<>();
+    Map<String ,CricketLeagueDao> list = new HashMap<>();
 
     public DataFile dataFile;
 
@@ -15,8 +15,8 @@ public class CricketAnalyzer {
         this.dataFile = dataFile;
     }
 
-    public int loadDataFile(String csvFilePath, DataFile dataFile) throws CricketAnalyzerException {
-        list=CricketLoaderFactory.getLoadDataFile(csvFilePath,dataFile);
+    public int loadDataFile(String... csvFilePath) throws CricketAnalyzerException {
+        list=new CricketLoaderFactory().getLoadDataFile(dataFile,csvFilePath);
         return list.size();
     }
 
@@ -26,9 +26,9 @@ public class CricketAnalyzer {
                     CricketAnalyzerException.ExceptionType.NULL_POINTER_EXCEPTION);
         }
         Comparator<CricketLeagueDao> comparator = new DataSorting().getComparator(fields,file);
-        List list1 = list.stream()
+        List list1 = list.values().stream()
                 .sorted(comparator)
-                .map(cricketLeagueDao -> cricketLeagueDao.getCricketDTO(dataFile))
+                .map(cricketLeagueDao -> cricketLeagueDao.getCricketDTO(file))
                 .collect(Collectors.toList());
         return list1;
     }

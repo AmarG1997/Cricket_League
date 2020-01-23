@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cricket_league.Batting_Bowling_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-23T07:12:27" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.704">
+  <properties/>
+  <testcase name="whenGivenBattingAndBowlingFileData_shouldReturnBestBatsman_Bowler" classname="cricket_league.Batting_Bowling_Test" time="0.704"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

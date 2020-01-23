@@ -59,6 +59,10 @@ public class CricketLeagueDao {
         fiveWickets = iplBowling.fiveWickets;
     }
 
+    public CricketLeagueDao(CricketLeagueDao cricketCSV) {
+
+    }
+
     @Override
     public String toString() {
         return "CricketLeagueDao{" +
