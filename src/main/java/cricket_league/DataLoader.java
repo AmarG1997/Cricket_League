@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.StreamSupport;
 
-public abstract class CricketAdapter {
+public abstract class DataLoader {
 
     Map<String,CricketLeagueDao> fileData = new HashMap<>();
 

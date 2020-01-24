@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.StreamSupport;
 
-public class BatsmanAdapter extends CricketAdapter {
+public class BatsmanAdapter extends DataLoader {
 
     Map<String,CricketLeagueDao>cricketLeagueDaoMap=new HashMap<>();
 
