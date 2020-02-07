@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cricket_league.MockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-07T07:09:40" hostname="administrator123-desktop" time="0.101">
+  <properties/>
+  <testcase name="givenBattingCsvFile_shouldReturnCsvFileData" classname="cricket_league.MockTest" time="0.101"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

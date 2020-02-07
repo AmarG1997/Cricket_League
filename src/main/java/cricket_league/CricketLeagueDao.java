@@ -64,6 +64,9 @@ public class CricketLeagueDao {
 
     }
 
+    public CricketLeagueDao() {
+    }
+
     @Override
     public String toString() {
         return "CricketLeagueDao{" +

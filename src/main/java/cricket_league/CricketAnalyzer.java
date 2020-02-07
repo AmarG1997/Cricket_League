@@ -8,18 +8,24 @@ import java.util.stream.Collectors;
 
 public class CricketAnalyzer {
 
+    private LoadDataFile loadDataFile = new LoadDataFile();
     Map<String ,CricketLeagueDao> list = null;
 
     public DataFile dataFile;
 
     public enum DataFile{BATTING,BOWLING,BATTING_BOWLING}
 
+    public CricketAnalyzer(DataFile dataFile,LoadDataFile loadDataFile) {
+        this.dataFile = dataFile;
+        this.loadDataFile=loadDataFile;
+    }
+
     public CricketAnalyzer(DataFile dataFile) {
         this.dataFile = dataFile;
     }
 
     public int loadDataFile(String... csvFilePath) throws CricketAnalyzerException, IOException, CsvBuilderException {
-        list=new CricketLoaderFactory().getLoadDataFile(dataFile,csvFilePath);
+        list=  loadDataFile.getCsvData(dataFile,csvFilePath);
         return list.size();
     }
 

@@ -11,9 +11,9 @@ import java.util.List;
 
 public class Batting_Test {
 
-    private static final String IPL_2019_BATTING_FILE_PATH="/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.csv";
-    private static final String IPL_2019_BATTING_WRONG_FILE_PATH="/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.txt";
-    private static final String IPL_2019_BATTING_WRONG_HEADER_FILE_PATH="/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanWithWrongHeader.csv";
+    private static final String IPL_2019_BATTING_FILE_PATH="/home/administrator/Cricket_League/src/test/resources/BatsmanData.csv";
+    private static final String IPL_2019_BATTING_WRONG_FILE_PATH="/home/administrator/Cricket_League/src/test/resources/BatsmanData.txt";
+    private static final String IPL_2019_BATTING_WRONG_HEADER_FILE_PATH="/home/administrator/Cricket_League/src/test/resources/BatsmanWithWrongHeader.csv";
 
     @Test
     public void givenBattingCsvFile_shouldReturnCsvFileData() throws CricketAnalyzerException, IOException, CsvBuilderException {

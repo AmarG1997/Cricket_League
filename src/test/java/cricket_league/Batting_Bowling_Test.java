@@ -9,8 +9,8 @@ import java.util.List;
 
 public class Batting_Bowling_Test {
 
-    private static final String IPL_2019_BATTING_FILE_PATH="/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BatsmanData.csv";
-    private static final String IPL_2019_BOWLING_FILE_PATH="/home/admin1/IdeaProjects/Cricket_League/src/test/resources/BowlerData.csv";
+    private static final String IPL_2019_BATTING_FILE_PATH="/home/administrator/Cricket_League/src/test/resources/BatsmanData.csv";
+    private static final String IPL_2019_BOWLING_FILE_PATH="/home/administrator/Cricket_League/src/test/resources/BowlerData.csv";
 
     @Test
     public void whenGivenBattingAndBowlingFileData_shouldReturnBestBatsman_Bowler() throws CricketAnalyzerException, IOException, CsvBuilderException {
